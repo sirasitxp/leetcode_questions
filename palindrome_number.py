@@ -47,5 +47,19 @@ def isPalindrome(x: int) -> bool:
         right -= 1
     return True
 
+def isPalindrome_no_conversion(x: int) -> bool:
+    if x < 0:
+        return False
+    original = x
+    reverse = remainder = 0
+    while (x != 0):
+        remainder = x % 10
+        reverse = (reverse * 10) + remainder
+        x = x // 10
+    if -2 ** 31 > reverse > 2 ** 31 - 1:
+        return False
+    return original == reverse
+
 
 print(isPalindrome(123))
+print(isPalindrome_no_conversion(121))
