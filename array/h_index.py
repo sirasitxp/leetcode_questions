@@ -22,3 +22,14 @@ Input: citations = [1,3,1]
 Output: 1
 
 """
+
+
+def hIndex(citations) -> int:
+    citations.sort(reverse=True)
+    for idx, citation in enumerate(citations):
+        # find the first index where citation is smaller than or equal to array index
+        if idx >= citation:
+            return idx
+    return len(citations)
+
+print(hIndex([3,0,6,1,5]))
