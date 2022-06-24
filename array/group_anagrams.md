@@ -43,3 +43,7 @@ def groupAnagrams(strs):
 
         return res.values()
 ```
+
+## Analyzing time and space complexity
+Time: O(M*N) where m is the size of the input and n is the size of each word  
+Space: O(N) since there is only 1 hashmap required
