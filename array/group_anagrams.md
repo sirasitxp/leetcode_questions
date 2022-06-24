@@ -28,3 +28,18 @@ strs[i] consists of lowercase English letters.
 
 
 # Solution
+The most optimal solution is to create an array that represents number of characters at each index. For instance, if the array at index 0 stores 4 as a value, that means a word in a string contains 4 a's in it. Use this process to track how many characters are there in a word, add them to corresponding key in a hasmap. 
+
+## Code example:
+```python
+from collections import defaultdict
+def groupAnagrams(strs):
+        res = defaultdict(list)
+        for word in strs:
+            char_count = [0] * 26
+            for char in word:
+                char_count[ord(char) - ord('a')] += 1
+            res[tuple(char_count)].append(word)
+
+        return res.values()
+```
