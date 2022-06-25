@@ -52,3 +52,7 @@ def sortColors(nums):
 
 # Code Visualization:
 https://pythontutor.com/render.html#code=def%20sortColors%28nums%29%3A%0A%20%20%20%20%20%20%20%20left,%20right%20%3D%200%20,%20len%28nums%29-1%0A%20%20%20%20%20%20%20%20current%20%3D%200%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20while%20current%20%3C%3D%20right%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20nums%5Bcurrent%5D%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20nums%5Bcurrent%5D,%20nums%5Bleft%5D%20%3D%20nums%5Bleft%5D,%20nums%5Bcurrent%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20left%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20current%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20nums%5Bcurrent%5D%20%3D%3D%202%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20nums%5Bcurrent%5D,%20nums%5Bright%5D%20%3D%20nums%5Bright%5D,%20nums%5Bcurrent%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20right%20-%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Don't%20move%20up%20because%20it's%20possible%20to%20accidentally%20swap%202%20with%200%20and%201%20was%20skipped.%20%0A%20%20%20%20%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20current%20%2B%3D1%20%0A%0Anums%20%3D%20%5B1,%202,%200%5D%0AsortColors%28nums%29%0Aprint%28nums%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
+
+# Analyzing Time and Space complexity:
+Time: O(N).  
+Space: O(1).  
