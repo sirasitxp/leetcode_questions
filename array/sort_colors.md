@@ -31,6 +31,24 @@ Follow up: Could you come up with a one-pass algorithm using only constant extra
 Go through the array one-pass. Check with if/elif conditions if any of them are equal to 0 or 2, if so move the zeros to the left, regarding to left pointer. Do the opposite for twos. So that, all the ones will end up in the middle. 
 
 # Code example:
+```python
+def sortColors(nums):
+        l, r = 0, len(nums)-1
+        i = 0
+        while i <= r:
+            if nums[i] == 0:
+                nums[l], nums[i] = nums[i], nums[l] 
+                l += 1
+            elif nums[i] == 2:
+                nums[r], nums[i] = nums[i], nums[r] 
+                r -= 1 
+                i -= 1
+            i += 1
+
+nums = [2,0,2,1,1,0]
+sortColors(nums)
+print(nums)
+```
 
 
 # Code Visualization:
