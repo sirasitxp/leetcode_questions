@@ -33,23 +33,22 @@ Go through the array one-pass. Check with if/elif conditions if any of them are 
 # Code example:
 ```python
 def sortColors(nums):
-        l, r = 0, len(nums)-1
-        i = 0
-        while i <= r:
-            if nums[i] == 0:
-                nums[l], nums[i] = nums[i], nums[l] 
-                l += 1
-            elif nums[i] == 2:
-                nums[r], nums[i] = nums[i], nums[r] 
-                r -= 1 
-                i -= 1
-            i += 1
-
-nums = [2,0,2,1,1,0]
-sortColors(nums)
-print(nums)
+        left, right = 0 , len(nums)-1
+        current = 0
+        
+        while current <= right:
+            if nums[current] == 0:
+                nums[current], nums[left] = nums[left], nums[current]
+                left += 1
+                current += 1
+            elif nums[current] == 2:
+                nums[current], nums[right] = nums[right], nums[current]
+                right -= 1
+                # Don't move up because it's possible to accidentally swap 2 with 0 and 1 was skipped. 
+            else:
+                current +=1 
 ```
 
 
 # Code Visualization:
-https://pythontutor.com/render.html#code=def%20sortColors%28nums%29%3A%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20Do%20not%20return%20anything,%20modify%20nums%20in-place%20instead.%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20l,%20r%20%3D%200,%20len%28nums%29-1%0A%20%20%20%20%20%20%20%20i%20%3D%200%0A%20%20%20%20%20%20%20%20while%20i%20%3C%3D%20r%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20nums%5Bi%5D%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20nums%5Bl%5D,%20nums%5Bi%5D%20%3D%20nums%5Bi%5D,%20nums%5Bl%5D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20l%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20nums%5Bi%5D%20%3D%3D%202%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20nums%5Br%5D,%20nums%5Bi%5D%20%3D%20nums%5Bi%5D,%20nums%5Br%5D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20r%20-%3D%201%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20i%20-%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20i%20%2B%3D%201%0A%0Anums%20%3D%20%5B2,0,2,1,1,0%5D%0AsortColors%28nums%29%0Aprint%28nums%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
+https://pythontutor.com/render.html#code=def%20sortColors%28nums%29%3A%0A%20%20%20%20%20%20%20%20left,%20right%20%3D%200%20,%20len%28nums%29-1%0A%20%20%20%20%20%20%20%20current%20%3D%200%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20while%20current%20%3C%3D%20right%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20nums%5Bcurrent%5D%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20nums%5Bcurrent%5D,%20nums%5Bleft%5D%20%3D%20nums%5Bleft%5D,%20nums%5Bcurrent%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20left%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20current%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20nums%5Bcurrent%5D%20%3D%3D%202%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20nums%5Bcurrent%5D,%20nums%5Bright%5D%20%3D%20nums%5Bright%5D,%20nums%5Bcurrent%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20right%20-%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Don't%20move%20up%20because%20it's%20possible%20to%20accidentally%20swap%202%20with%200%20and%201%20was%20skipped.%20%0A%20%20%20%20%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20current%20%2B%3D1%20%0A%0Anums%20%3D%20%5B1,%202,%200%5D%0AsortColors%28nums%29%0Aprint%28nums%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
