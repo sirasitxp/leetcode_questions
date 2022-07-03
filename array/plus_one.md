@@ -56,5 +56,5 @@ def plusOne(digits):
 https://pythontutor.com/render.html#code=def%20plusOne%28digits%29%3A%0A%20%20%20%20%20%20%20%20n%20%3D%20len%28digits%29%0A%20%20%20%20%20%20%20%20for%20i%20in%20range%28n%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20idx%20%3D%20n%20-%201%20-%20i%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20digits%5Bidx%5D%20%3D%3D%209%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20digits%5Bidx%5D%20%3D%200%0A%20%20%20%20%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20digits%5Bidx%5D%20%2B%3D%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20digits%0A%20%20%20%20%20%20%20%20return%20%5B1%5D%20%2B%20digits%0A%20%20%20%20%20%20%20%20%0Aprint%28plusOne%28%5B1,2,3%5D%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
 
 ## Analyzing time and space complexity.
-Time: O(N)
-Space: O(N)
+Time: O(N).  
+Space: O(N).  
