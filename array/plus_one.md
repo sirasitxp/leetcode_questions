@@ -35,3 +35,20 @@ Thus, the result should be [1,0].
 1 <= digits.length <= 100
 0 <= digits[i] <= 9
 digits does not contain any leading 0's.
+
+# Solution
+Iterate through the array from the back, check if each number is equal to nine, if so set it to zero and increase the number in front of it by one. 
+
+## Code Example
+```python
+def plusOne(digits):
+        n = len(digits)
+        for i in range(n):
+            idx = n - 1 - i
+            if digits[idx] == 9:
+                digits[idx] = 0
+            else:
+                digits[idx] += 1
+                return digits
+        return [1] + digits
+```
