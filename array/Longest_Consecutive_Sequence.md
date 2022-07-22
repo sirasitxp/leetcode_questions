@@ -32,3 +32,10 @@ Copy a set ,iterate through the array, check if it is a starting point of a sequ
                 longest = max(length, longest)
         return longest  
 ```
+
+# Analyzing time and space complexity
+Time: O(N)   
+Space: O(N)
+
+# Code Visualization
+
