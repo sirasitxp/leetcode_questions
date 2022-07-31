@@ -96,7 +96,7 @@ Follow up: Could you write a generalized algorithm to work on any possible set o
 ```
 
 ## Time and Space Complexity
-T: O(N)
-S: O(N)
+T: O(N)  
+S: O(N)  
 
 
