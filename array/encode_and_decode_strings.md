@@ -32,28 +32,29 @@ You are not allowed to solve the problem using any serialize methods (such as ev
 
 ## Example 1:
 
-Input: dummy_input = ["Hello","World"]
-Output: ["Hello","World"]
-Explanation:
-Machine 1:
-Codec encoder = new Codec();
-String msg = encoder.encode(strs);
-Machine 1 ---msg---> Machine 2
+Input: dummy_input = ["Hello","World"]  
+Output: ["Hello","World"]  
 
-Machine 2:
-Codec decoder = new Codec();
-String[] strs = decoder.decode(msg);
+## Explanation:  
+Machine 1:  
+Codec encoder = new Codec();  
+String msg = encoder.encode(strs);  
+Machine 1 ---msg---> Machine 2  
 
+Machine 2:  
+Codec decoder = new Codec();  
+String[] strs = decoder.decode(msg);  
+  
 ## Example 2:
 
-Input: dummy_input = [""]
-Output: [""]
+Input: dummy_input = [""]  
+Output: [""]  
  
 ## Constraints:
 
-1 <= strs.length <= 200
-0 <= strs[i].length <= 200
-strs[i] contains any possible characters out of 256 valid ASCII characters.
+1 <= strs.length <= 200  
+0 <= strs[i].length <= 200  
+strs[i] contains any possible characters out of 256 valid ASCII characters.  
  
 
 Follow up: Could you write a generalized algorithm to work on any possible set of characters?
