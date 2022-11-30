@@ -14,7 +14,7 @@ Input: a = "1010", b = "1011"
 Output: "10101"
 ```
 ## Constraints:
-
-1 <= a.length, b.length <= 104
-a and b consist only of '0' or '1' characters.
-Each string does not contain leading zeros except for the zero itself.
+1 <= a.length, b.length <= 104  
+a and b consist only of '0' or '1' characters.   
+Each string does not contain leading zeros except for the zero itself.  
+ 
