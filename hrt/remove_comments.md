@@ -79,7 +79,6 @@ class Solution:
                         i += 2
                         inComment = False
                         continue
-                    i += 1
                 # not in Comment, we find /* // and common character
                 else:
                     if c[i:i + 2] == '/*' and i + 1 < n:
@@ -89,7 +88,7 @@ class Solution:
                     if c[i:i + 2] == '//' and i + 1 < n:
                         break
                     new_str += c[i]
-                    i += 1
+                i += 1
             if new_str and not inComment:
                 ans.append(new_str)
                     
