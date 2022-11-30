@@ -39,3 +39,16 @@ class Solution:
 
         return result[::-1]
 ```
+## Explanation
+1. First convert strings to lists, so that we can pop from the back.(No need to reverse)  
+2. Run while loop to make sure that everything is exhausted.  
+3. Keep popping from both of the list.
+4. Add result of Mod to the result
+5. Calculate the remaining carry by division.
+6. After iterations, return reversed version of result as eveything was calculated from the back of the list.
+
+## Analyze time and space complexity. 
+```
+Time: O(N)
+Space: O(N)
+```
